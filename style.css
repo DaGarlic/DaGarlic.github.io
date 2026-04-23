@@ -82,13 +82,9 @@ nav {
 nav a {
   font-size: 0.8rem;
   font-weight: 500;
-  padding: 4px 12px;
-  border-radius: 4px;
-  background: var(--accent-light);
   color: var(--accent);
-  transition: opacity 0.15s;
 }
-nav a:hover { opacity: 0.8; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
 
 .status {
   display: flex;
@@ -209,7 +205,9 @@ h2 {
 .project-name a {
   font-size: 0.9375rem;
   font-weight: 600;
+  color: var(--text);
 }
+.project-name a:hover { color: var(--accent); text-decoration: none; }
 
 .app-link {
   font-size: 0.75rem !important;
