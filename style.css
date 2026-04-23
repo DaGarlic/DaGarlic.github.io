@@ -4,27 +4,23 @@
   --secondary: #444;
   --dim: #888;
   --accent: #2563eb;
-  --accent-light: #eff4ff;
   --green: #16a34a;
-  --green-light: #f0fdf4;
   --border: #e8e8e8;
-  --tag-bg: #eff4ff;
-  --tag-color: #2563eb;
+  --tag-bg: #f0f0f0;
+  --tag-color: #555;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f0f0f;
     --text: #f0f0f0;
-    --secondary: #999;
-    --dim: #555;
+    --secondary: #aaa;
+    --dim: #777;
     --accent: #6b9fff;
-    --accent-light: #16213a;
     --green: #4ade80;
-    --green-light: #0f2a1a;
-    --border: #252525;
-    --tag-bg: #16213a;
-    --tag-color: #6b9fff;
+    --border: #2a2a2a;
+    --tag-bg: #222;
+    --tag-color: #888;
   }
 }
 
@@ -122,10 +118,10 @@ h2 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--accent);
+  color: var(--secondary);
   margin-bottom: 18px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -172,7 +168,7 @@ h2 {
 .highlight {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--green);
+  color: var(--secondary);
 }
 
 /* ── Tags ── */
@@ -236,7 +232,7 @@ h2 {
 .skill-label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
