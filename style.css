@@ -15,9 +15,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f0f0f;
-    --text: #eee;
-    --secondary: #bbb;
-    --dim: #777;
+    --text: #f0f0f0;
+    --secondary: #999;
+    --dim: #555;
     --accent: #6b9fff;
     --accent-light: #16213a;
     --green: #4ade80;
@@ -157,7 +157,7 @@ h2 {
 }
 
 .entry-role {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--secondary);
   margin-bottom: 4px;
 }
