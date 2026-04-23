@@ -206,9 +206,7 @@ a.entry-org { color: var(--accent); }
 .project-name a {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: var(--text);
 }
-.project-name a:hover { color: var(--accent); text-decoration: none; }
 
 .app-link {
   font-size: 0.75rem !important;
