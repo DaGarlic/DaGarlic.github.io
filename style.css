@@ -213,9 +213,7 @@ a.entry-org { color: var(--accent); }
 .app-link {
   font-size: 0.75rem !important;
   font-weight: 400 !important;
-  color: var(--dim) !important;
 }
-.app-link:hover { color: var(--accent) !important; }
 
 .project-desc {
   font-size: 0.8125rem;
