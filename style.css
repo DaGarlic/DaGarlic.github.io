@@ -16,13 +16,13 @@
   :root {
     --bg: #0f0f0f;
     --text: #f0f0f0;
-    --secondary: #999;
-    --dim: #555;
+    --secondary: #aaa;
+    --dim: #666;
     --accent: #6b9fff;
     --accent-light: #16213a;
     --green: #4ade80;
     --green-light: #0f2a1a;
-    --border: #252525;
+    --border: #2a2a2a;
     --tag-bg: #16213a;
     --tag-color: #6b9fff;
   }
@@ -158,7 +158,7 @@ h2 {
 
 .entry-role {
   font-size: 0.8125rem;
-  color: var(--secondary);
+  color: var(--accent);
   margin-bottom: 4px;
 }
 
