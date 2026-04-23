@@ -4,348 +4,184 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariq Koh</title>
-  <meta name="description" content="Ariq Koh — CS student at NTU Singapore researching quality-diversity optimization and LLMs." />
+  <meta name="description" content="Ariq Koh — CS student at NTU Singapore." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- ── NAV ── -->
-  <header id="nav">
-    <nav class="nav-pill" id="nav-pill">
-      <a href="#" class="nav-brand">AK</a>
-      <div class="nav-divider"></div>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </nav>
-  </header>
-
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="mobile-menu hidden">
-    <div class="mobile-menu-overlay" id="menu-overlay"></div>
-    <div class="mobile-menu-card float-card-lg">
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-    </div>
-  </div>
-
   <main>
 
-    <!-- ── HERO ── -->
-    <section id="hero" class="hero">
-      <div class="hero-inner">
+    <header>
+      <h1>Ariq Koh</h1>
+      <p class="subtitle">Computer Science · NTU Singapore · Turing AI Scholars</p>
+      <p class="bio">
+        Researching quality-diversity optimization, evolutionary algorithms,
+        and how LLMs can drive search for diverse, high-performing solutions in design spaces.
+      </p>
+      <nav>
+        <a href="resume2.pdf" target="_blank">resume</a>
+        <a href="mailto:ariq0001@e.ntu.edu.sg">email</a>
+        <a href="https://www.linkedin.com/in/ariq-koh" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://github.com/DaGarlic" target="_blank" rel="noopener">github</a>
+      </nav>
+      <p class="status"><span class="dot"></span>UC Berkeley Exchange — Aug–Dec 2026</p>
+    </header>
 
-        <div class="hero-text float-card-lg reveal">
-          <p class="section-label" style="margin-bottom: 12px;">Computer Science @ NTU Singapore</p>
-          <h1>Ariq Koh</h1>
-          <p class="hero-bio">
-            Researching quality-diversity optimization, evolutionary algorithms,
-            and how LLMs can drive search for diverse, high-performing solutions
-            in design spaces.
-          </p>
-          <div class="hero-actions">
-            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
-              Resume
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
-            <a href="#contact" class="btn-ghost">Get in Touch</a>
-          </div>
-          <div class="status-badge">
-            <span class="status-dot status-dot-pulse"></span>
-            UC Berkeley Exchange — Aug – Dec 2026
-          </div>
+    <section>
+      <h2>Education</h2>
+      <div class="row">
+        <div class="row-left">
+          <strong>Nanyang Technological University</strong>
+          <span class="meta">2024–2028</span>
         </div>
-
-        <div class="hero-canvas-wrap canvas-card reveal reveal-delay">
-          <canvas id="hero-canvas"></canvas>
+        <div class="row-right">
+          B.Computing in CS, Turing AI Scholars Programme<br>
+          <span class="accent">cGPA 4.65 / 5.00 — First Class</span>
         </div>
-
       </div>
+      <div class="row">
+        <div class="row-left">
+          <strong>Victoria Junior College</strong>
+          <span class="meta">2020–2021</span>
+        </div>
+        <div class="row-right">GCE A-Levels, AAA/A (88.75/90 RP)</div>
+      </div>
+    </section>
 
-      <div class="scroll-hint">
-        <span class="scroll-hint-label">Scroll</span>
-        <div class="scroll-mouse">
-          <div class="scroll-mouse-dot"></div>
+    <section>
+      <h2>Experience</h2>
+      <div class="row">
+        <div class="row-left">
+          <strong>NTU URECA</strong>
+          <span class="meta">Aug 2025–Present</span>
+        </div>
+        <div class="row-right">
+          Research Mentorship<br>
+          <span class="dim">LLM-based QD emitters for generative design exploration using pyribs, Shap-E, and BLIP-2.</span>
+          <div class="tags"><span class="tag">LLMs</span><span class="tag">Quality-Diversity</span><span class="tag">pyribs</span></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-left">
+          <strong>Alibaba-NTU ANGEL Lab</strong>
+          <span class="meta">Jun–Dec 2025</span>
+        </div>
+        <div class="row-right">
+          Research Intern<br>
+          <span class="dim">Black-box automatic prompt optimization framework using multi-agent evolutionary strategies.</span>
+          <div class="tags"><span class="tag">Multi-Agent</span><span class="tag">Evolutionary Algorithms</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ── ABOUT ── -->
-    <section id="about" class="section">
-      <div class="container">
-        <p class="section-label reveal" style="margin-bottom: 40px;">About</p>
-
-        <div class="about-grid">
-
-          <!-- Publications -->
-          <div class="float-card about-card span-2 reveal">
-            <p class="section-label" style="margin-bottom: 16px;">Publications</p>
-            <div class="stack">
-              <div>
-                <a href="https://openreview.net/forum?id=EzjnQ8ZNJM" target="_blank" rel="noopener noreferrer" class="pub-title">
-                  Quality-Diversity LLM for Generative Design <span class="external-arrow">↗</span>
-                </a>
-                <p class="pub-meta">First Author · AI4X Accelerate 2026, Singapore</p>
-              </div>
-              <div>
-                <p class="pub-title no-link">QD-LLMs: Quality Diversity Optimization with LLMs for Generative Design Exploration</p>
-                <p class="pub-meta">First Author · In Review · GECCO 2026 Workshop</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Education -->
-          <div class="float-card about-card reveal">
-            <p class="section-label" style="margin-bottom: 16px;">Education</p>
-            <div class="stack">
-              <div>
-                <p class="card-title">Nanyang Technological University</p>
-                <p class="card-sub">B.Computing in CS, Turing AI Scholars Programme</p>
-                <p class="card-accent">cGPA: 4.65 / 5.00 (First Class)</p>
-                <p class="card-meta">2024 – 2028</p>
-              </div>
-              <div>
-                <p class="card-title">Victoria Junior College</p>
-                <p class="card-sub">GCE A-Levels, AAA/A (88.75/90 RP)</p>
-                <p class="card-meta">2020 – 2021</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Experience 1 -->
-          <div class="float-card about-card reveal">
-            <p class="section-label" style="margin-bottom: 12px;">NTU URECA</p>
-            <p class="card-title">Research Mentorship</p>
-            <p class="card-meta" style="margin-bottom: 8px;">Aug 2025 – Present</p>
-            <p class="card-body">LLM-based QD emitters for generative design exploration using pyribs, Shap-E, and BLIP-2.</p>
-            <div class="tags">
-              <span class="tag">LLMs</span>
-              <span class="tag">Quality-Diversity</span>
-              <span class="tag">pyribs</span>
-            </div>
-          </div>
-
-          <!-- Experience 2 -->
-          <div class="float-card about-card reveal">
-            <p class="section-label" style="margin-bottom: 12px;">Alibaba-NTU ANGEL Lab</p>
-            <p class="card-title">Research Intern</p>
-            <p class="card-meta" style="margin-bottom: 8px;">Jun – Dec 2025</p>
-            <p class="card-body">Black-box automatic prompt optimization framework using multi-agent evolutionary strategies.</p>
-            <div class="tags">
-              <span class="tag">Multi-Agent</span>
-              <span class="tag">Evolutionary Algorithms</span>
-            </div>
-          </div>
-
-          <!-- Awards -->
-          <div class="float-card about-card reveal">
-            <p class="section-label" style="margin-bottom: 16px;">Awards</p>
-            <div class="stack">
-              <div>
-                <p class="card-title">NTU Deep Learning Week 2026</p>
-                <p class="card-accent">Top 10</p>
-              </div>
-              <div>
-                <p class="card-title">TAISP Hackathon 2025</p>
-                <p class="card-accent">3rd Place</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Skills -->
-          <div class="float-card about-card span-3 reveal">
-            <p class="section-label" style="margin-bottom: 16px;">Stack</p>
-            <div class="skills-grid">
-              <div>
-                <p class="skills-category">Languages</p>
-                <p class="skills-items">Python · C · C++ · Java</p>
-              </div>
-              <div>
-                <p class="skills-category">ML / AI</p>
-                <p class="skills-items">PyTorch · TensorFlow · pyribs · OpenAI API · LangChain · MediaPipe</p>
-              </div>
-              <div>
-                <p class="skills-category">Backend</p>
-                <p class="skills-items">FastAPI · Django REST · Flask · WebSocket</p>
-              </div>
-              <div>
-                <p class="skills-category">Tools</p>
-                <p class="skills-items">Git · NumPy · OpenCV</p>
-              </div>
-            </div>
-          </div>
-
+    <section>
+      <h2>Publications</h2>
+      <div class="row">
+        <div class="row-left">
+          <span class="meta">AI4X 2026</span>
+        </div>
+        <div class="row-right">
+          <a href="https://openreview.net/forum?id=EzjnQ8ZNJM" target="_blank" rel="noopener">
+            Quality-Diversity LLM for Generative Design ↗
+          </a><br>
+          <span class="dim">First Author · AI4X Accelerate 2026, Singapore</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-left">
+          <span class="meta">GECCO 2026</span>
+        </div>
+        <div class="row-right">
+          QD-LLMs: Quality Diversity Optimization with LLMs for Generative Design Exploration<br>
+          <span class="dim">First Author · In Review · GECCO 2026 Workshop</span>
         </div>
       </div>
     </section>
 
-    <!-- ── PROJECTS ── -->
-    <section id="projects" class="section">
-      <div class="container">
-        <p class="section-label reveal" style="margin-bottom: 8px;">Projects</p>
-        <p class="section-sub reveal">A collection of work in AI, machine learning, and algorithms.</p>
-
-        <div class="projects-grid">
-
-          <article class="float-card project-card reveal">
-            <div class="project-header">
-              <h3 class="project-title">OneStop</h3>
-              <div class="project-links">
-                <a href="https://apps.apple.com/sg/app/onestop/id6756521327" target="_blank" rel="noopener noreferrer" aria-label="View live" class="icon-link">
-                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                </a>
-                <a href="https://github.com/DaGarlic/OneStop" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">All-in-one campus assistant iOS app with on-device AI chat powered by Apple Foundation Models.</p>
-            <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Apple FM</span><span class="tag">Node.js</span></div>
-          </article>
-
-          <article class="float-card project-card reveal">
-            <div class="project-header">
-              <h3 class="project-title">ResNet</h3>
-              <div class="project-links">
-                <a href="https://github.com/DaGarlic/ResNet" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">Post-crisis resource allocation combining multimodal deep learning with DBSCAN spatial clustering.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">CLIP</span><span class="tag">React</span></div>
-          </article>
-
-          <article class="float-card project-card reveal">
-            <div class="project-header">
-              <h3 class="project-title">Agentic-PhishNet</h3>
-              <div class="project-links">
-                <a href="https://github.com/DaGarlic/Agentic-PhishNet" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">Multi-agent LLM framework for phishing email detection through collaborative analysis.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">Security</span></div>
-          </article>
-
-          <article class="float-card project-card reveal">
-            <div class="project-header">
-              <h3 class="project-title">CartPole DQN</h3>
-              <div class="project-links">
-                <a href="https://github.com/DaGarlic/CartPole" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">Deep Q-Network agent using PyTorch to solve CartPole-v1 with experience replay and target networks.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">RL</span><span class="tag">DQN</span></div>
-          </article>
-
-          <article class="float-card project-card reveal">
-            <div class="project-header">
-              <h3 class="project-title">Lunar Lander QD</h3>
-              <div class="project-links">
-                <a href="https://github.com/DaGarlic/LunarLander" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">Quality-Diversity optimization on LunarLander-v3 using pyribs.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">pyribs</span><span class="tag">QD</span></div>
-          </article>
-
-          <article class="float-card project-card reveal">
-            <div class="project-header">
-              <h3 class="project-title">TD Learning Minefield</h3>
-              <div class="project-links">
-                <a href="https://github.com/DaGarlic/TD_Learning_Minefield" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">Temporal difference learning agent navigating a minefield with value-based RL.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">RL</span><span class="tag">TD Learning</span></div>
-          </article>
-
-          <article class="float-card project-card reveal">
-            <div class="project-header">
-              <h3 class="project-title">TicTacToe AI</h3>
-              <div class="project-links">
-                <a href="https://github.com/DaGarlic/TicTacToe" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">Game AI using minimax with alpha-beta pruning.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Game AI</span><span class="tag">Minimax</span></div>
-          </article>
-
-          <article class="float-card project-card reveal">
-            <div class="project-header">
-              <h3 class="project-title">Knight's Tour</h3>
-              <div class="project-links">
-                <a href="https://github.com/DaGarlic/Knights-Tour" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">Backtracking with Warnsdorff's heuristic to solve the classic chess puzzle.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Algorithms</span></div>
-          </article>
-
+    <section>
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <div class="project-name">
+            <a href="https://github.com/DaGarlic/OneStop" target="_blank" rel="noopener">OneStop ↗</a>
+            <a href="https://apps.apple.com/sg/app/onestop/id6756521327" target="_blank" rel="noopener" class="app-link">App Store ↗</a>
+          </div>
+          <span class="dim">All-in-one campus assistant iOS app with on-device AI chat powered by Apple Foundation Models.</span>
+          <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Apple FM</span><span class="tag">Node.js</span></div>
         </div>
-
-        <a href="https://github.com/DaGarlic" target="_blank" rel="noopener noreferrer" class="float-card github-all reveal">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          <span>View all repositories</span>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- ── CONTACT ── -->
-    <section id="contact" class="section section-contact">
-      <div class="container contact-inner">
-        <p class="section-label reveal" style="margin-bottom: 8px;">Contact</p>
-        <h2 class="contact-heading reveal">Get in Touch</h2>
-        <p class="contact-sub reveal">Open to research collaborations and internship opportunities.</p>
-
-        <div class="contact-grid reveal">
-          <a href="mailto:ariq0001@e.ntu.edu.sg" class="float-card contact-card">
-            <div class="contact-icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-            </div>
-            <span class="contact-mono">email</span>
-          </a>
-          <a href="https://www.linkedin.com/in/ariq-koh" target="_blank" rel="noopener noreferrer" class="float-card contact-card">
-            <div class="contact-icon">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </div>
-            <span class="contact-mono">linkedin</span>
-          </a>
-          <a href="https://github.com/DaGarlic" target="_blank" rel="noopener noreferrer" class="float-card contact-card">
-            <div class="contact-icon">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            </div>
-            <span class="contact-mono">github</span>
-          </a>
+        <div class="project-item">
+          <div class="project-name"><a href="https://github.com/DaGarlic/ResNet" target="_blank" rel="noopener">ResNet ↗</a></div>
+          <span class="dim">Post-crisis resource allocation combining multimodal deep learning with DBSCAN spatial clustering.</span>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">CLIP</span><span class="tag">React</span></div>
+        </div>
+        <div class="project-item">
+          <div class="project-name"><a href="https://github.com/DaGarlic/Agentic-PhishNet" target="_blank" rel="noopener">Agentic-PhishNet ↗</a></div>
+          <span class="dim">Multi-agent LLM framework for phishing email detection through collaborative analysis.</span>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">Security</span></div>
+        </div>
+        <div class="project-item">
+          <div class="project-name"><a href="https://github.com/DaGarlic/CartPole" target="_blank" rel="noopener">CartPole DQN ↗</a></div>
+          <span class="dim">Deep Q-Network agent using PyTorch to solve CartPole-v1 with experience replay and target networks.</span>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">RL</span></div>
+        </div>
+        <div class="project-item">
+          <div class="project-name"><a href="https://github.com/DaGarlic/LunarLander" target="_blank" rel="noopener">Lunar Lander QD ↗</a></div>
+          <span class="dim">Quality-Diversity optimization on LunarLander-v3 using pyribs.</span>
+          <div class="tags"><span class="tag">Python</span><span class="tag">pyribs</span><span class="tag">QD</span></div>
+        </div>
+        <div class="project-item">
+          <div class="project-name"><a href="https://github.com/DaGarlic/TD_Learning_Minefield" target="_blank" rel="noopener">TD Learning Minefield ↗</a></div>
+          <span class="dim">Temporal difference learning agent navigating a minefield with value-based RL.</span>
+          <div class="tags"><span class="tag">Python</span><span class="tag">RL</span><span class="tag">TD Learning</span></div>
+        </div>
+        <div class="project-item">
+          <div class="project-name"><a href="https://github.com/DaGarlic/TicTacToe" target="_blank" rel="noopener">TicTacToe AI ↗</a></div>
+          <span class="dim">Game AI using minimax with alpha-beta pruning.</span>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Minimax</span></div>
+        </div>
+        <div class="project-item">
+          <div class="project-name"><a href="https://github.com/DaGarlic/Knights-Tour" target="_blank" rel="noopener">Knight's Tour ↗</a></div>
+          <span class="dim">Backtracking with Warnsdorff's heuristic to solve the classic chess puzzle.</span>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Algorithms</span></div>
         </div>
       </div>
     </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="row">
+        <div class="row-left"><span class="dim">Languages</span></div>
+        <div class="row-right">Python · C · C++ · Java</div>
+      </div>
+      <div class="row">
+        <div class="row-left"><span class="dim">ML / AI</span></div>
+        <div class="row-right">PyTorch · TensorFlow · pyribs · OpenAI API · LangChain · MediaPipe</div>
+      </div>
+      <div class="row">
+        <div class="row-left"><span class="dim">Backend</span></div>
+        <div class="row-right">FastAPI · Django REST · Flask · WebSocket</div>
+      </div>
+      <div class="row">
+        <div class="row-left"><span class="dim">Tools</span></div>
+        <div class="row-right">Git · NumPy · OpenCV</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Awards</h2>
+      <div class="row">
+        <div class="row-left"><span class="meta">2026</span></div>
+        <div class="row-right"><strong>NTU Deep Learning Week</strong> — Top 10</div>
+      </div>
+      <div class="row">
+        <div class="row-left"><span class="meta">2025</span></div>
+        <div class="row-right"><strong>TAISP Hackathon</strong> — 3rd Place</div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Ariq Koh · 2026</span>
+    </footer>
 
   </main>
-
-  <footer class="footer">
-    <p>Ariq Koh · 2026</p>
-  </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>
