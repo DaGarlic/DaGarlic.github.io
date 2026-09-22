@@ -136,7 +136,7 @@
           <summary>Technical details</summary>
           <div class="proj-details-body">
             <p>Incoming posts are clustered geographically with DBSCAN, then each is encoded by CLIP ViT-B/32 into image and text embeddings. Those feed a 4-layer MLP (1024→512→256→5) for resource type, a ViT severity classifier, and two informativeness classifiers that filter out irrelevant posts before scores are aggregated per cluster. Served over a Flask REST/SSE API to a React + Leaflet map frontend.</p>
-            <img src="assets/projects/resnet-architecture.png" alt="ResNet system architecture diagram" loading="lazy" />
+            <img src="assets/projects/resnet-architecture.png" alt="ResNet system architecture diagram" width="1400" height="585" loading="lazy" />
           </div>
         </details>
       </div>
@@ -161,7 +161,7 @@
           <summary>Technical details</summary>
           <div class="proj-details-body">
             <p>DQN agent with a separate target network and experience replay buffer for training stability, epsilon-greedy exploration with decay, and soft target updates. Records video of training episodes at a configurable interval.</p>
-            <img src="assets/projects/cartpole-demo.gif" alt="Trained CartPole agent balancing the pole" loading="lazy" />
+            <img src="assets/projects/cartpole-demo.gif" alt="Trained CartPole agent balancing the pole" width="600" height="400" loading="lazy" />
           </div>
         </details>
       </div>
@@ -174,9 +174,9 @@
           <summary>Technical details</summary>
           <div class="proj-details-body">
             <p>Uses pyribs' Centroidal Voronoi Tessellation archive: evolution-strategy emitters propose new landing policies, and each is placed in the archive by its impact velocity and position — its behavioral descriptor — rather than judged on reward alone, building a map of diverse high-performing strategies instead of a single optimum.</p>
-            <img src="assets/projects/lunarlander-demo1.gif" alt="Elite policy landing the lunar lander" loading="lazy" />
-            <img src="assets/projects/lunarlander-demo2.gif" alt="A second elite policy landing the lunar lander with a different behavior" loading="lazy" />
-            <img src="assets/projects/lunarlander-archive.png" alt="CVT archive of discovered elite policies" loading="lazy" />
+            <img src="assets/projects/lunarlander-demo1.gif" alt="Elite policy landing the lunar lander" width="600" height="400" loading="lazy" />
+            <img src="assets/projects/lunarlander-demo2.gif" alt="A second elite policy landing the lunar lander with a different behavior" width="600" height="400" loading="lazy" />
+            <img src="assets/projects/lunarlander-archive.png" alt="CVT archive of discovered elite policies" width="800" height="600" loading="lazy" />
           </div>
         </details>
       </div>
