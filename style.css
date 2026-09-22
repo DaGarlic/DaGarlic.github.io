@@ -247,7 +247,10 @@ a.entry-org { color: var(--accent); }
   transition: transform 0.15s ease;
   flex-shrink: 0;
 }
-.proj-details[open] summary::before {
+.proj-details.is-open summary::before {
+  transform: rotate(45deg);
+}
+.proj-details:not(.js-anim)[open] summary::before {
   transform: rotate(45deg);
 }
 
