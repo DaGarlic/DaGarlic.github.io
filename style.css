@@ -270,6 +270,16 @@ a.entry-org { color: var(--accent); }
   line-height: 1.65;
 }
 
+.proj-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.proj-gallery img {
+  margin-top: 0;
+}
+
 .proj-details-body img {
   display: block;
   width: 100%;
@@ -315,4 +325,5 @@ footer {
   main { padding: 36px 18px 40px; }
   .entry-header { flex-direction: column; gap: 0; }
   .entry-date { margin-top: 1px; }
+  .proj-gallery { grid-template-columns: 1fr; }
 }
