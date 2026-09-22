@@ -219,6 +219,64 @@ a.entry-org { color: var(--accent); }
   line-height: 1.6;
 }
 
+/* ── Project technical details ── */
+.proj-details {
+  margin-top: 8px;
+}
+
+.proj-details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.proj-details summary::-webkit-details-marker { display: none; }
+
+.proj-details summary::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+.proj-details[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.proj-details summary:hover { text-decoration: underline; }
+
+.proj-details-body {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--tag-bg);
+}
+
+.proj-details-body p {
+  font-size: 0.8125rem;
+  color: var(--secondary);
+  line-height: 1.65;
+}
+
+.proj-details-body img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+  border: 1px solid var(--border);
+}
+
 /* ── Skills ── */
 .skill-row {
   display: grid;

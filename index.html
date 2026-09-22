@@ -119,48 +119,101 @@
         </div>
         <p class="project-desc">All-in-one campus assistant iOS app with on-device AI chat powered by Apple Foundation Models. Top 50 on the Singapore App Store Utilities chart, 700+ unique downloads.</p>
         <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Apple FM</span><span class="tag">Node.js</span></div>
+        <details class="proj-details">
+          <summary>Technical details</summary>
+          <div class="proj-details-body">
+            <p>Native SwiftUI app. Chat runs on-device via Apple Foundation Models, so conversations don't round-trip to a server. Timetables are extracted directly from screenshots and fed into the same on-device model for chatbot-integrated queries and class reminders, with a Node.js/Express backend handling bus tracking data.</p>
+          </div>
+        </details>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://github.com/DaGarlic/ResNet" target="_blank" rel="noopener">ResNet ↗</a></div>
         <p class="project-desc">Post-crisis resource allocation combining multimodal deep learning with DBSCAN spatial clustering.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">CLIP</span><span class="tag">React</span></div>
+        <details class="proj-details">
+          <summary>Technical details</summary>
+          <div class="proj-details-body">
+            <p>Incoming posts are clustered geographically with DBSCAN, then each is encoded by CLIP ViT-B/32 into image and text embeddings. Those feed a 4-layer MLP (1024→512→256→5) for resource type, a ViT severity classifier, and two informativeness classifiers that filter out irrelevant posts before scores are aggregated per cluster. Served over a Flask REST/SSE API to a React + Leaflet map frontend.</p>
+            <img src="assets/projects/resnet-architecture.png" alt="ResNet system architecture diagram" loading="lazy" />
+          </div>
+        </details>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://github.com/DaGarlic/Agentic-PhishNet" target="_blank" rel="noopener">Agentic-PhishNet ↗</a></div>
         <p class="project-desc">Multi-agent LLM framework for phishing email detection through collaborative analysis.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">Security</span></div>
+        <details class="proj-details">
+          <summary>Technical details</summary>
+          <div class="proj-details-body">
+            <p>An orchestrator agent routes incoming email content to a committee of specialized LLM sub-agents, each analyzing a different signal. Their individual verdicts and confidence scores are aggregated into a single explained verdict, rather than a single opaque classifier score. Django REST backend, React frontend.</p>
+          </div>
+        </details>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://github.com/DaGarlic/CartPole" target="_blank" rel="noopener">CartPole DQN ↗</a></div>
         <p class="project-desc">Deep Q-Network agent using PyTorch to solve CartPole-v1 with experience replay and target networks.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">RL</span><span class="tag">DQN</span></div>
+        <details class="proj-details">
+          <summary>Technical details</summary>
+          <div class="proj-details-body">
+            <p>DQN agent with a separate target network and experience replay buffer for training stability, epsilon-greedy exploration with decay, and soft target updates. Records video of training episodes at a configurable interval.</p>
+            <img src="assets/projects/cartpole-demo.gif" alt="Trained CartPole agent balancing the pole" loading="lazy" />
+          </div>
+        </details>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://github.com/DaGarlic/LunarLander" target="_blank" rel="noopener">Lunar Lander QD ↗</a></div>
         <p class="project-desc">Quality-Diversity optimization on LunarLander-v3 using pyribs.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">pyribs</span><span class="tag">QD</span></div>
+        <details class="proj-details">
+          <summary>Technical details</summary>
+          <div class="proj-details-body">
+            <p>Uses pyribs' Centroidal Voronoi Tessellation archive: evolution-strategy emitters propose new landing policies, and each is placed in the archive by its impact velocity and position — its behavioral descriptor — rather than judged on reward alone, building a map of diverse high-performing strategies instead of a single optimum.</p>
+            <img src="assets/projects/lunarlander-demo1.gif" alt="Elite policy landing the lunar lander" loading="lazy" />
+            <img src="assets/projects/lunarlander-demo2.gif" alt="A second elite policy landing the lunar lander with a different behavior" loading="lazy" />
+            <img src="assets/projects/lunarlander-archive.png" alt="CVT archive of discovered elite policies" loading="lazy" />
+          </div>
+        </details>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://github.com/DaGarlic/TD_Learning_Minefield" target="_blank" rel="noopener">TD Learning Minefield ↗</a></div>
         <p class="project-desc">Temporal difference learning agent navigating a minefield with value-based RL.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">RL</span><span class="tag">TD Learning</span></div>
+        <details class="proj-details">
+          <summary>Technical details</summary>
+          <div class="proj-details-body">
+            <p>Tabular Q-learning agent trained by trial-and-error on a grid world with mines and a goal cell, split into three components: the environment and reward logic, the agent's movement interface, and the Q-learning training loop that extracts the optimal policy.</p>
+          </div>
+        </details>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://github.com/DaGarlic/TicTacToe" target="_blank" rel="noopener">TicTacToe AI ↗</a></div>
         <p class="project-desc">Game AI using minimax with alpha-beta pruning.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">Minimax</span></div>
+        <details class="proj-details">
+          <summary>Technical details</summary>
+          <div class="proj-details-body">
+            <p>Implements minimax with O as the maximizer and X as the minimizer. Every terminal board state is scored (+1 O win, −1 X win, 0 draw), and each move recursively searches for the score an optimal opponent would allow, so the AI plays a provably unbeatable game.</p>
+          </div>
+        </details>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://github.com/DaGarlic/Knights-Tour" target="_blank" rel="noopener">Knight's Tour ↗</a></div>
         <p class="project-desc">Backtracking with Warnsdorff's heuristic to solve the classic chess puzzle.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">Algorithms</span></div>
+        <details class="proj-details">
+          <summary>Technical details</summary>
+          <div class="proj-details-body">
+            <p>Started as plain stack-based backtracking, which became impractical past a 7×7 board (10M+ iterations for one solution). Adding Warnsdorff's Rule — always moving to the unvisited square with the fewest onward moves — cut that dramatically, enabling exhaustive search across all variants (open/closed tours, every starting coordinate) with results streamed to disk to avoid memory blowup.</p>
+          </div>
+        </details>
       </div>
 
     </div>
