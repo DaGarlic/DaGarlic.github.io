@@ -5,6 +5,7 @@
   --dim: #888;
   --accent: #2563eb;
   --green: #16a34a;
+  --green-rgb: 22, 163, 74;
   --border: #e8e8e8;
   --tag-bg: #f0f0f0;
   --tag-color: #555;
@@ -18,6 +19,7 @@
     --dim: #777;
     --accent: #6b9fff;
     --green: #4ade80;
+    --green-rgb: 74, 222, 128;
     --border: #2a2a2a;
     --tag-bg: #222;
     --tag-color: #888;
@@ -71,6 +73,75 @@ h1 {
   margin-bottom: 20px;
   line-height: 1.7;
 }
+
+/* ── Hero timeline ── */
+.tl-track {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 22px 0 26px;
+  padding: 0 2px;
+}
+
+.tl-track::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--border);
+}
+
+.tl-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.tl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+}
+.tl-item.is-past .tl-dot { background: var(--accent); }
+.tl-item.is-future .tl-dot {
+  background: var(--bg);
+  border: 2px solid var(--dim);
+}
+.tl-item.is-now .tl-dot {
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(var(--green-rgb), 0.25);
+  animation: tl-pulse 2s ease-in-out infinite;
+}
+@keyframes tl-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(var(--green-rgb), 0.25); }
+  50% { box-shadow: 0 0 0 7px rgba(var(--green-rgb), 0.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tl-item.is-now .tl-dot { animation: none; }
+}
+
+.tl-date {
+  font-size: 0.65rem;
+  color: var(--dim);
+  white-space: nowrap;
+}
+
+.tl-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-align: center;
+  white-space: nowrap;
+}
+.tl-item.is-now .tl-label { color: var(--green); }
 
 nav {
   display: flex;
@@ -326,4 +397,25 @@ footer {
   .entry-header { flex-direction: column; gap: 0; }
   .entry-date { margin-top: 1px; }
   .proj-gallery { grid-template-columns: 1fr; }
+
+  .tl-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0 0 0 1px;
+  }
+  .tl-track::before {
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+  .tl-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .tl-date, .tl-label { text-align: left; }
 }
