@@ -84,7 +84,12 @@
     this.el.style.overflow = '';
   };
 
-  document.querySelectorAll('.proj-details').forEach(function (el) {
-    new Accordion(el);
-  });
+  function initProjDetails(root) {
+    (root || document).querySelectorAll('.proj-details').forEach(function (el) {
+      if (!el.classList.contains('js-anim')) new Accordion(el);
+    });
+  }
+
+  window.initProjDetails = initProjDetails;
+  initProjDetails(document);
 })();

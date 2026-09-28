@@ -4,59 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariq Koh</title>
-  <meta name="description" content="Ariq Koh — CS student at NTU Singapore." />
+  <meta name="description" content="Ariq Koh, CS student at NTU Singapore." />
+  <meta name="theme-color" content="#08080b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="details-anim.js" defer></script>
+  <script src="board.js" defer></script>
 </head>
 <body>
-<main>
 
-  <header>
+  <header class="hero">
     <h1>Ariq Koh</h1>
     <p class="subtitle">Computer Science · NTU Singapore · Turing AI Scholars Programme</p>
-
-    <ol class="tl-track">
-      <li class="tl-item is-past">
-        <span class="tl-dot"></span>
-        <div class="tl-info">
-          <span class="tl-date">Aug 2024</span>
-          <span class="tl-label">NTU</span>
-          <span class="tl-loc">Singapore</span>
-        </div>
-      </li>
-      <li class="tl-item is-past">
-        <span class="tl-dot"></span>
-        <div class="tl-info">
-          <span class="tl-date">Jun 2025</span>
-          <span class="tl-label">ANGEL Lab</span>
-          <span class="tl-loc">Singapore</span>
-        </div>
-      </li>
-      <li class="tl-item is-past">
-        <span class="tl-dot"></span>
-        <div class="tl-info">
-          <span class="tl-date">Apr 2026</span>
-          <span class="tl-label">A*STAR</span>
-          <span class="tl-loc">Singapore</span>
-        </div>
-      </li>
-      <li class="tl-item is-now">
-        <span class="tl-dot"></span>
-        <div class="tl-info">
-          <span class="tl-date">Aug 2026</span>
-          <span class="tl-label">UC Berkeley</span>
-          <span class="tl-loc">Berkeley</span>
-        </div>
-      </li>
-      <li class="tl-item is-future">
-        <span class="tl-dot"></span>
-        <div class="tl-info">
-          <span class="tl-date">Jan 2027</span>
-          <span class="tl-label">Makeable.build</span>
-          <span class="tl-loc">San Francisco</span>
-        </div>
-      </li>
-    </ol>
 
     <nav>
       <a href="resume2.pdf" target="_blank">Resume</a>
@@ -66,9 +27,34 @@
     </nav>
   </header>
 
-  <section>
-    <h2>Education</h2>
+  <section class="board-wrap">
+    <div class="board-head">
+      <p class="board-kicker">// everything, at a glance</p>
+    </div>
 
+    <div id="board" class="board" role="list" aria-label="Career board"></div>
+  </section>
+
+  <div id="entry-panel" class="entry-overlay" hidden>
+    <div class="entry-panel" role="dialog" aria-modal="true" aria-labelledby="entry-panel-title">
+      <button type="button" class="entry-close" aria-label="Close">✕</button>
+      <div class="entry-panel-meta">
+        <span id="entry-panel-cat" class="entry-panel-cat"></span>
+        <span id="entry-panel-date" class="entry-panel-date"></span>
+      </div>
+      <div id="entry-panel-body" class="entry-panel-body"></div>
+    </div>
+  </div>
+
+  <footer>Ariq Koh · 2026</footer>
+
+  <!-- ============================================================ -->
+  <!-- Archive data: one <template> per entry. category + date drive -->
+  <!-- grid placement; the inner markup is cloned into the detail    -->
+  <!-- panel on open, unchanged from the previous resume markup.     -->
+  <!-- ============================================================ -->
+
+  <template class="archive-entry" data-category="education" data-date="2024-08" data-title="Nanyang Technological University" data-summary="Bachelor of Computing · Highest Distinction · CGPA 4.68/5.00" data-date-end="2028-05">
     <div class="entry">
       <div class="entry-header">
         <span class="entry-org">Nanyang Technological University, Singapore</span>
@@ -79,42 +65,19 @@
       <p class="entry-detail" style="margin-top: 6px;"><span class="coursework-label">Scholarship</span> Turing AI Scholars Programme (TAISP) Scholarship</p>
       <p class="entry-detail"><span class="coursework-label">Coursework</span> Artificial Intelligence (A+) · Data Analytics &amp; Mining (A+) · Data Structures &amp; Algorithms (A+) · Digital Logic (A+) · Machine Learning (A+) · Object Oriented Design &amp; Programming (A+) · Probability (A+) · Program Synthesis (A+) · Algorithm Design &amp; Analysis (A) · Calculus (A) · Computer Organisation &amp; Architecture (A)</p>
     </div>
+  </template>
 
+  <template class="archive-entry" data-category="education" data-date="2026-08" data-title="UC Berkeley" data-summary="Berkeley Engineering GLOBE, Exchange Programme" data-date-end="2026-12">
     <div class="entry">
       <div class="entry-header">
         <span class="entry-org">University of California, Berkeley, USA</span>
         <span class="entry-date">Aug–Dec 2026</span>
       </div>
-      <p class="entry-role">Berkeley Engineering GLOBE — Exchange Programme</p>
+      <p class="entry-role">Berkeley Engineering GLOBE, Exchange Programme</p>
     </div>
-  </section>
+  </template>
 
-  <section>
-    <h2>Experience</h2>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-org">Makeable.build, San Francisco, California, USA</span>
-        <span class="entry-date">Jan–Aug 2027</span>
-      </div>
-      <p class="entry-role">AI and Software Engineering Intern</p>
-      <p class="entry-detail">Responsible for designing, experimenting, and deploying an autonomous pipeline for hardware manufacturing at an Afore Capital-backed startup.</p>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-org">A*STAR Centre for Frontier AI Research (CFAR), Singapore</span>
-        <span class="entry-date">Apr–Aug 2026</span>
-      </div>
-      <p class="entry-role">Research Intern — Agentic Scientist Platform</p>
-      <p class="entry-detail">Developed an Agentic Scientist Platform on a multi-agent framework using Google ADK, incorporating RAG, tool calling, and multi-agent orchestration.</p>
-      <div class="tags">
-        <span class="tag">Multi-Agent</span>
-        <span class="tag">Google ADK</span>
-        <span class="tag">RAG</span>
-      </div>
-    </div>
-
+  <template class="archive-entry" data-category="experience" data-date="2025-06" data-title="Alibaba-NTU ANGEL Lab" data-summary="Research Intern: black-box prompt optimization, multi-agent evolutionary strategies" data-date-end="2025-12">
     <div class="entry">
       <div class="entry-header">
         <span class="entry-org">Alibaba-NTU ANGEL Lab, Singapore</span>
@@ -127,21 +90,36 @@
         <span class="tag">Evolutionary Algorithms</span>
       </div>
     </div>
-  </section>
+  </template>
 
-  <section>
-    <h2>Publications</h2>
-
+  <template class="archive-entry" data-category="experience" data-date="2026-04" data-title="A*STAR CFAR" data-summary="Research Intern: Agentic Scientist Platform, Google ADK + RAG" data-date-end="2026-08">
     <div class="entry">
       <div class="entry-header">
-        <a href="https://dl.acm.org/doi/10.1145/3795101.3814651" target="_blank" rel="noopener" class="entry-org">
-          QD-LLMs: Quality Diversity Optimization with LLMs for Generative Design Exploration ↗
-        </a>
-        <span class="entry-date">2026</span>
+        <span class="entry-org">A*STAR Centre for Frontier AI Research (CFAR), Singapore</span>
+        <span class="entry-date">Apr–Aug 2026</span>
       </div>
-      <p class="entry-role">First Author · GECCO 2026 Workshop, San José, Costa Rica</p>
+      <p class="entry-role">Research Intern: Agentic Scientist Platform</p>
+      <p class="entry-detail">Developed an Agentic Scientist Platform on a multi-agent framework using Google ADK, incorporating RAG, tool calling, and multi-agent orchestration.</p>
+      <div class="tags">
+        <span class="tag">Multi-Agent</span>
+        <span class="tag">Google ADK</span>
+        <span class="tag">RAG</span>
+      </div>
     </div>
+  </template>
 
+  <template class="archive-entry" data-category="experience" data-date="2027-01" data-title="Makeable.build" data-summary="AI and Software Engineering Intern: autonomous hardware manufacturing pipeline" data-date-end="2027-08">
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-org">Makeable.build, San Francisco, California, USA</span>
+        <span class="entry-date">Jan–Aug 2027</span>
+      </div>
+      <p class="entry-role">AI and Software Engineering Intern</p>
+      <p class="entry-detail">Responsible for designing, experimenting, and deploying an autonomous pipeline for hardware manufacturing at an Afore Capital-backed startup.</p>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="publications" data-date="2026-06" data-title="Quality-Diversity LLM for Generative Design" data-summary="First Author · AI4X Accelerate 2026, Singapore">
     <div class="entry">
       <div class="entry-header">
         <a href="https://openreview.net/forum?id=EzjnQ8ZNJM" target="_blank" rel="noopener" class="entry-org">
@@ -151,156 +129,143 @@
       </div>
       <p class="entry-role">First Author · AI4X Accelerate 2026, Singapore</p>
     </div>
-  </section>
+  </template>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project-list">
-
-      <div class="project-item">
-        <div class="project-name">
-          <span>OneStop</span>
-          <a href="https://apps.apple.com/sg/app/onestop/id6756521327" target="_blank" rel="noopener" class="app-link">App Store ↗</a>
-        </div>
-        <p class="project-desc">All-in-one campus assistant iOS app with on-device AI chat powered by Apple Foundation Models. Top 50 on the Singapore App Store Utilities chart, 700+ unique downloads.</p>
-        <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Apple FM</span><span class="tag">Node.js</span></div>
-        <details class="proj-details">
-          <summary>Technical details</summary>
-          <div class="proj-details-body">
-            <p>Native SwiftUI app. Chat runs on-device via Apple Foundation Models, so conversations don't round-trip to a server. Timetables are extracted directly from screenshots and fed into the same on-device model for chatbot-integrated queries and class reminders, with a Node.js/Express backend handling bus tracking data.</p>
-          </div>
-        </details>
-      </div>
-
-      <div class="project-item">
-        <div class="project-name"><a href="https://github.com/DaGarlic/ResNet" target="_blank" rel="noopener">ResNet ↗</a></div>
-        <p class="project-desc">Post-crisis resource allocation combining multimodal deep learning with DBSCAN spatial clustering.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">CLIP</span><span class="tag">React</span></div>
-        <details class="proj-details">
-          <summary>Technical details</summary>
-          <div class="proj-details-body">
-            <p>Incoming posts are clustered geographically with DBSCAN, then each is encoded by CLIP ViT-B/32 into image and text embeddings. Those feed a 4-layer MLP (1024→512→256→5) for resource type, a ViT severity classifier, and two informativeness classifiers that filter out irrelevant posts before scores are aggregated per cluster. Served over a Flask REST/SSE API to a React + Leaflet map frontend.</p>
-            <img src="assets/projects/resnet-architecture.png" alt="ResNet system architecture diagram" width="1400" height="585" loading="lazy" />
-          </div>
-        </details>
-      </div>
-
-      <div class="project-item">
-        <div class="project-name"><a href="https://github.com/DaGarlic/Agentic-PhishNet" target="_blank" rel="noopener">Agentic-PhishNet ↗</a></div>
-        <p class="project-desc">Multi-agent LLM framework for phishing email detection through collaborative analysis.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">Security</span></div>
-        <details class="proj-details">
-          <summary>Technical details</summary>
-          <div class="proj-details-body">
-            <p>An orchestrator agent routes incoming email content to a committee of specialized LLM sub-agents, each analyzing a different signal. Their individual verdicts and confidence scores are aggregated into a single explained verdict, rather than a single opaque classifier score. Django REST backend, React frontend.</p>
-          </div>
-        </details>
-      </div>
-
-      <div class="project-item">
-        <div class="project-name"><a href="https://github.com/DaGarlic/CartPole" target="_blank" rel="noopener">CartPole DQN ↗</a></div>
-        <p class="project-desc">Deep Q-Network agent using PyTorch to solve CartPole-v1 with experience replay and target networks.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">RL</span><span class="tag">DQN</span></div>
-        <details class="proj-details">
-          <summary>Technical details</summary>
-          <div class="proj-details-body">
-            <p>DQN agent with a separate target network and experience replay buffer for training stability, epsilon-greedy exploration with decay, and soft target updates. Records video of training episodes at a configurable interval.</p>
-            <img src="assets/projects/cartpole-demo.gif" alt="Trained CartPole agent balancing the pole" width="600" height="400" loading="lazy" />
-          </div>
-        </details>
-      </div>
-
-      <div class="project-item">
-        <div class="project-name"><a href="https://github.com/DaGarlic/LunarLander" target="_blank" rel="noopener">Lunar Lander QD ↗</a></div>
-        <p class="project-desc">Quality-Diversity optimization on LunarLander-v3 using pyribs.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">pyribs</span><span class="tag">QD</span></div>
-        <details class="proj-details">
-          <summary>Technical details</summary>
-          <div class="proj-details-body">
-            <p>Uses pyribs' Centroidal Voronoi Tessellation archive: evolution-strategy emitters propose new landing policies, and each is placed in the archive by its impact velocity and position — its behavioral descriptor — rather than judged on reward alone, building a map of diverse high-performing strategies instead of a single optimum.</p>
-            <div class="proj-gallery">
-              <img src="assets/projects/lunarlander-demo1.gif" alt="Elite policy landing the lunar lander" width="600" height="400" loading="lazy" />
-              <img src="assets/projects/lunarlander-demo2.gif" alt="A second elite policy landing the lunar lander with a different behavior" width="600" height="400" loading="lazy" />
-              <img src="assets/projects/lunarlander-archive.png" alt="CVT archive of discovered elite policies" width="800" height="600" loading="lazy" />
-            </div>
-          </div>
-        </details>
-      </div>
-
-      <div class="project-item">
-        <div class="project-name"><a href="https://github.com/DaGarlic/TD_Learning_Minefield" target="_blank" rel="noopener">TD Learning Minefield ↗</a></div>
-        <p class="project-desc">Temporal difference learning agent navigating a minefield with value-based RL.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">RL</span><span class="tag">TD Learning</span></div>
-        <details class="proj-details">
-          <summary>Technical details</summary>
-          <div class="proj-details-body">
-            <p>Tabular Q-learning agent trained by trial-and-error on a grid world with mines and a goal cell, split into three components: the environment and reward logic, the agent's movement interface, and the Q-learning training loop that extracts the optimal policy.</p>
-          </div>
-        </details>
-      </div>
-
-      <div class="project-item">
-        <div class="project-name"><a href="https://github.com/DaGarlic/TicTacToe" target="_blank" rel="noopener">TicTacToe AI ↗</a></div>
-        <p class="project-desc">Game AI using minimax with alpha-beta pruning.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Minimax</span></div>
-        <details class="proj-details">
-          <summary>Technical details</summary>
-          <div class="proj-details-body">
-            <p>Implements minimax with O as the maximizer and X as the minimizer. Every terminal board state is scored (+1 O win, −1 X win, 0 draw), and each move recursively searches for the score an optimal opponent would allow, so the AI plays a provably unbeatable game.</p>
-          </div>
-        </details>
-      </div>
-
-      <div class="project-item">
-        <div class="project-name"><a href="https://github.com/DaGarlic/Knights-Tour" target="_blank" rel="noopener">Knight's Tour ↗</a></div>
-        <p class="project-desc">Backtracking with Warnsdorff's heuristic to solve the classic chess puzzle.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Algorithms</span></div>
-        <details class="proj-details">
-          <summary>Technical details</summary>
-          <div class="proj-details-body">
-            <p>Started as plain stack-based backtracking, which became impractical past a 7×7 board (10M+ iterations for one solution). Adding Warnsdorff's Rule — always moving to the unvisited square with the fewest onward moves — cut that dramatically, enabling exhaustive search across all variants (open/closed tours, every starting coordinate) with results streamed to disk to avoid memory blowup.</p>
-          </div>
-        </details>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <div class="skill-row">
-      <span class="skill-label">AI Coding</span>
-      <span class="skill-items">Claude Code · Codex</span>
-    </div>
-    <div class="skill-row">
-      <span class="skill-label">Languages</span>
-      <span class="skill-items">Python · C · C++ · Java · Swift · English · Chinese</span>
-    </div>
-    <div class="skill-row">
-      <span class="skill-label">ML / AI</span>
-      <span class="skill-items">PyTorch · TensorFlow/Keras · pyribs · OpenAI API · LangChain · MediaPipe</span>
-    </div>
-    <div class="skill-row">
-      <span class="skill-label">Backend</span>
-      <span class="skill-items">FastAPI · Django REST · Flask · WebSocket</span>
-    </div>
-    <div class="skill-row">
-      <span class="skill-label">Tools</span>
-      <span class="skill-items">Git · NumPy · OpenCV · SwiftUI · Node.js/Express</span>
-    </div>
-  </section>
-
-  <section>
-    <h2>Awards</h2>
-
+  <template class="archive-entry" data-category="publications" data-date="2026-07" data-title="QD-LLMs" data-summary="First Author · GECCO 2026 Workshop, Costa Rica">
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-org">NTU Deep Learning Week 2026</span>
+        <a href="https://dl.acm.org/doi/10.1145/3795101.3814651" target="_blank" rel="noopener" class="entry-org">
+          QD-LLMs: Quality Diversity Optimization with LLMs for Generative Design Exploration ↗
+        </a>
         <span class="entry-date">2026</span>
       </div>
-      <p class="highlight">Finalist, Top 10 in Track</p>
+      <p class="entry-role">First Author · GECCO 2026 Workshop, San José, Costa Rica</p>
     </div>
+  </template>
 
+  <template class="archive-entry" data-category="projects" data-date="2024-06" data-title="Knight's Tour" data-summary="Backtracking + Warnsdorff's heuristic for the classic chess puzzle">
+    <div class="project-item">
+      <div class="project-name"><a href="https://github.com/DaGarlic/Knights-Tour" target="_blank" rel="noopener">Knight's Tour ↗</a></div>
+      <p class="project-desc">Backtracking with Warnsdorff's heuristic to solve the classic chess puzzle.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Algorithms</span></div>
+      <details class="proj-details">
+        <summary>Technical details</summary>
+        <div class="proj-details-body">
+          <p>Started as plain stack-based backtracking, which became impractical past a 7×7 board (10M+ iterations for one solution). Adding Warnsdorff's Rule (always moving to the unvisited square with the fewest onward moves) cut that dramatically, enabling exhaustive search across all variants (open/closed tours, every starting coordinate) with results streamed to disk to avoid memory blowup.</p>
+        </div>
+      </details>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="projects" data-date="2024-06" data-title="TicTacToe AI" data-summary="Minimax with alpha-beta pruning, provably unbeatable">
+    <div class="project-item">
+      <div class="project-name"><a href="https://github.com/DaGarlic/TicTacToe" target="_blank" rel="noopener">TicTacToe AI ↗</a></div>
+      <p class="project-desc">Game AI using minimax with alpha-beta pruning.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Minimax</span></div>
+      <details class="proj-details">
+        <summary>Technical details</summary>
+        <div class="proj-details-body">
+          <p>Implements minimax with O as the maximizer and X as the minimizer. Every terminal board state is scored (+1 O win, −1 X win, 0 draw), and each move recursively searches for the score an optimal opponent would allow, so the AI plays a provably unbeatable game.</p>
+        </div>
+      </details>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="projects" data-date="2025-04" data-title="TD Learning Minefield" data-summary="Tabular Q-learning agent navigating a minefield">
+    <div class="project-item">
+      <div class="project-name"><a href="https://github.com/DaGarlic/TD_Learning_Minefield" target="_blank" rel="noopener">TD Learning Minefield ↗</a></div>
+      <p class="project-desc">Temporal difference learning agent navigating a minefield with value-based RL.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">RL</span><span class="tag">TD Learning</span></div>
+      <details class="proj-details">
+        <summary>Technical details</summary>
+        <div class="proj-details-body">
+          <p>Tabular Q-learning agent trained by trial-and-error on a grid world with mines and a goal cell, split into three components: the environment and reward logic, the agent's movement interface, and the Q-learning training loop that extracts the optimal policy.</p>
+        </div>
+      </details>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="projects" data-date="2025-06" data-title="Lunar Lander QD" data-summary="Quality-Diversity optimization on LunarLander-v3 with pyribs">
+    <div class="project-item">
+      <div class="project-name"><a href="https://github.com/DaGarlic/LunarLander" target="_blank" rel="noopener">Lunar Lander QD ↗</a></div>
+      <p class="project-desc">Quality-Diversity optimization on LunarLander-v3 using pyribs.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">pyribs</span><span class="tag">QD</span></div>
+      <details class="proj-details">
+        <summary>Technical details</summary>
+        <div class="proj-details-body">
+          <p>Uses pyribs' Centroidal Voronoi Tessellation archive: evolution-strategy emitters propose new landing policies, and each is placed in the archive by its impact velocity and position (its behavioral descriptor) rather than judged on reward alone, building a map of diverse high-performing strategies instead of a single optimum.</p>
+          <div class="proj-gallery">
+            <img src="assets/projects/lunarlander-demo1.gif" alt="Elite policy landing the lunar lander" width="600" height="400" loading="lazy" />
+            <img src="assets/projects/lunarlander-demo2.gif" alt="A second elite policy landing the lunar lander with a different behavior" width="600" height="400" loading="lazy" />
+            <img src="assets/projects/lunarlander-archive.png" alt="CVT archive of discovered elite policies" width="800" height="600" loading="lazy" />
+          </div>
+        </div>
+      </details>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="projects" data-date="2025-07" data-title="CartPole DQN" data-summary="Deep Q-Network with experience replay and target networks">
+    <div class="project-item">
+      <div class="project-name"><a href="https://github.com/DaGarlic/CartPole" target="_blank" rel="noopener">CartPole DQN ↗</a></div>
+      <p class="project-desc">Deep Q-Network agent using PyTorch to solve CartPole-v1 with experience replay and target networks.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">RL</span><span class="tag">DQN</span></div>
+      <details class="proj-details">
+        <summary>Technical details</summary>
+        <div class="proj-details-body">
+          <p>DQN agent with a separate target network and experience replay buffer for training stability, epsilon-greedy exploration with decay, and soft target updates. Records video of training episodes at a configurable interval.</p>
+          <img src="assets/projects/cartpole-demo.gif" alt="Trained CartPole agent balancing the pole" width="600" height="400" loading="lazy" />
+        </div>
+      </details>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="projects" data-date="2025-08" data-title="Agentic-PhishNet" data-summary="Multi-agent LLM framework for phishing email detection">
+    <div class="project-item">
+      <div class="project-name"><a href="https://github.com/DaGarlic/Agentic-PhishNet" target="_blank" rel="noopener">Agentic-PhishNet ↗</a></div>
+      <p class="project-desc">Multi-agent LLM framework for phishing email detection through collaborative analysis.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">Security</span></div>
+      <details class="proj-details">
+        <summary>Technical details</summary>
+        <div class="proj-details-body">
+          <p>An orchestrator agent routes incoming email content to a committee of specialized LLM sub-agents, each analyzing a different signal. Their individual verdicts and confidence scores are aggregated into a single explained verdict, rather than a single opaque classifier score. Django REST backend, React frontend.</p>
+        </div>
+      </details>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="projects" data-date="2026-01" data-title="OneStop" data-summary="On-device AI campus assistant · 700+ downloads, Top 50 Utilities">
+    <div class="project-item">
+      <div class="project-name">
+        <span>OneStop</span>
+        <a href="https://apps.apple.com/sg/app/onestop/id6756521327" target="_blank" rel="noopener" class="app-link">App Store ↗</a>
+      </div>
+      <p class="project-desc">All-in-one campus assistant iOS app with on-device AI chat powered by Apple Foundation Models. Top 50 on the Singapore App Store Utilities chart, 700+ unique downloads.</p>
+      <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Apple FM</span><span class="tag">Node.js</span></div>
+      <details class="proj-details">
+        <summary>Technical details</summary>
+        <div class="proj-details-body">
+          <p>Native SwiftUI app. Chat runs on-device via Apple Foundation Models, so conversations don't round-trip to a server. Timetables are extracted directly from screenshots and fed into the same on-device model for chatbot-integrated queries and class reminders, with a Node.js/Express backend handling bus tracking data.</p>
+        </div>
+      </details>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="projects" data-date="2026-03" data-title="ResNet" data-summary="Post-crisis resource allocation using CLIP + DBSCAN clustering">
+    <div class="project-item">
+      <div class="project-name"><a href="https://github.com/DaGarlic/ResNet" target="_blank" rel="noopener">ResNet ↗</a></div>
+      <p class="project-desc">Post-crisis resource allocation combining multimodal deep learning with DBSCAN spatial clustering.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">CLIP</span><span class="tag">React</span></div>
+      <details class="proj-details">
+        <summary>Technical details</summary>
+        <div class="proj-details-body">
+          <p>Incoming posts are clustered geographically with DBSCAN, then each is encoded by CLIP ViT-B/32 into image and text embeddings. Those feed a 4-layer MLP (1024→512→256→5) for resource type, a ViT severity classifier, and two informativeness classifiers that filter out irrelevant posts before scores are aggregated per cluster. Served over a Flask REST/SSE API to a React + Leaflet map frontend.</p>
+          <img src="assets/projects/resnet-architecture.png" alt="ResNet system architecture diagram" width="1400" height="585" loading="lazy" />
+        </div>
+      </details>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="awards" data-date="2025-12" data-title="TAISP Hackathon" data-summary="3rd Place">
     <div class="entry">
       <div class="entry-header">
         <span class="entry-org">TAISP Hackathon</span>
@@ -308,10 +273,52 @@
       </div>
       <p class="highlight">3rd Place</p>
     </div>
-  </section>
+  </template>
 
-  <footer>Ariq Koh · 2026</footer>
+  <template class="archive-entry" data-category="awards" data-date="2026-03" data-title="NTU Deep Learning Week" data-summary="Finalist, Top 10 in Track">
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-org">NTU Deep Learning Week 2026</span>
+        <span class="entry-date">2026</span>
+      </div>
+      <p class="highlight">Finalist, Top 10 in Track</p>
+    </div>
+  </template>
 
-</main>
+  <template class="archive-entry" data-category="skills" data-date="now" data-title="AI Coding" data-summary="Claude Code · Codex">
+    <div class="skill-row">
+      <span class="skill-label">AI Coding</span>
+      <span class="skill-items">Claude Code · Codex</span>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="skills" data-date="now" data-title="Languages" data-summary="Python · C · C++ · Java · Swift · English · Chinese">
+    <div class="skill-row">
+      <span class="skill-label">Languages</span>
+      <span class="skill-items">Python · C · C++ · Java · Swift · English · Chinese</span>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="skills" data-date="now" data-title="ML / AI" data-summary="PyTorch · TensorFlow/Keras · pyribs · OpenAI API · LangChain">
+    <div class="skill-row">
+      <span class="skill-label">ML / AI</span>
+      <span class="skill-items">PyTorch · TensorFlow/Keras · pyribs · OpenAI API · LangChain · MediaPipe</span>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="skills" data-date="now" data-title="Backend" data-summary="FastAPI · Django REST · Flask · WebSocket">
+    <div class="skill-row">
+      <span class="skill-label">Backend</span>
+      <span class="skill-items">FastAPI · Django REST · Flask · WebSocket</span>
+    </div>
+  </template>
+
+  <template class="archive-entry" data-category="skills" data-date="now" data-title="Tools" data-summary="Git · NumPy · OpenCV · SwiftUI · Node.js/Express">
+    <div class="skill-row">
+      <span class="skill-label">Tools</span>
+      <span class="skill-items">Git · NumPy · OpenCV · SwiftUI · Node.js/Express</span>
+    </div>
+  </template>
+
 </body>
 </html>
