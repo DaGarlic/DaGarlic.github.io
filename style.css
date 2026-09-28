@@ -180,7 +180,7 @@ nav a:hover {
   width: 100%;
   padding: 11px 13px;
   border-radius: 8px;
-  border: 1px solid hsl(var(--hue) 40% 28%);
+  border: 1px solid var(--line);
   background: var(--panel);
   cursor: pointer;
   text-align: left;
@@ -188,15 +188,15 @@ nav a:hover {
 }
 .board-card:hover, .board-card:focus-visible {
   transform: translateX(2px);
-  border-color: hsl(var(--hue) 60% 45%);
+  border-color: hsl(var(--hue) 40% 38%);
   background: var(--panel-2);
-  box-shadow: 0 8px 22px -8px hsla(var(--hue) 75% 55% / 0.5);
+  box-shadow: 0 8px 18px -10px hsla(var(--hue) 65% 50% / 0.35);
 }
 
 .board-card-date {
   font-family: var(--mono);
   font-size: 0.62rem;
-  color: hsl(var(--hue) 55% 68%);
+  color: var(--dim);
 }
 
 .board-card-title {
