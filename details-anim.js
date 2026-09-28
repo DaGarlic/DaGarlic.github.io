@@ -84,12 +84,7 @@
     this.el.style.overflow = '';
   };
 
-  function initProjDetails(root) {
-    (root || document).querySelectorAll('.proj-details').forEach(function (el) {
-      if (!el.classList.contains('js-anim')) new Accordion(el);
-    });
-  }
-
-  window.initProjDetails = initProjDetails;
-  initProjDetails(document);
+  document.querySelectorAll('.proj-details').forEach(function (el) {
+    new Accordion(el);
+  });
 })();
