@@ -19,7 +19,6 @@
 html { font-size: 15px; background: var(--bg); }
 
 body {
-  background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
   line-height: 1.6;
@@ -38,6 +37,14 @@ body::before {
     radial-gradient(600px 360px at 100% 10%, rgba(140, 90, 255, 0.08), transparent 55%),
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0px, rgba(255, 255, 255, 0.025) 1px, transparent 1px, transparent 26px),
     repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0px, rgba(255, 255, 255, 0.025) 1px, transparent 1px, transparent 26px);
+}
+
+.rain-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.22;
 }
 
 ::selection { background: rgba(var(--accent-rgb), 0.35); color: #fff; }
@@ -163,15 +170,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 9px;
-  max-height: 640px;
-  overflow-y: auto;
-  padding-right: 4px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--line) transparent;
 }
-.board-cards::-webkit-scrollbar { width: 6px; }
-.board-cards::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
-.board-cards::-webkit-scrollbar-track { background: transparent; }
 
 .board-card {
   display: flex;
@@ -415,7 +414,6 @@ footer {
   footer { padding: 20px 18px 36px; }
 
   .board { grid-template-columns: 1fr; }
-  .board-cards { max-height: none; overflow-y: visible; }
 
   .proj-gallery { grid-template-columns: 1fr; }
   .entry-panel { padding: 36px 18px 24px; }

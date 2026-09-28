@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style.css" />
   <script src="details-anim.js" defer></script>
   <script src="board.js" defer></script>
+  <script src="rain.js" defer></script>
 </head>
 <body>
 
@@ -157,20 +158,6 @@
     </div>
   </template>
 
-  <template class="archive-entry" data-category="projects" data-date="2024-06" data-title="TicTacToe AI" data-summary="Minimax with alpha-beta pruning, provably unbeatable">
-    <div class="project-item">
-      <div class="project-name"><a href="https://github.com/DaGarlic/TicTacToe" target="_blank" rel="noopener">TicTacToe AI ↗</a></div>
-      <p class="project-desc">Game AI using minimax with alpha-beta pruning.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Minimax</span></div>
-      <details class="proj-details">
-        <summary>Technical details</summary>
-        <div class="proj-details-body">
-          <p>Implements minimax with O as the maximizer and X as the minimizer. Every terminal board state is scored (+1 O win, −1 X win, 0 draw), and each move recursively searches for the score an optimal opponent would allow, so the AI plays a provably unbeatable game.</p>
-        </div>
-      </details>
-    </div>
-  </template>
-
   <template class="archive-entry" data-category="projects" data-date="2025-04" data-title="TD Learning Minefield" data-summary="Tabular Q-learning agent navigating a minefield">
     <div class="project-item">
       <div class="project-name"><a href="https://github.com/DaGarlic/TD_Learning_Minefield" target="_blank" rel="noopener">TD Learning Minefield ↗</a></div>
@@ -199,35 +186,6 @@
             <img src="assets/projects/lunarlander-demo2.gif" alt="A second elite policy landing the lunar lander with a different behavior" width="600" height="400" loading="lazy" />
             <img src="assets/projects/lunarlander-archive.png" alt="CVT archive of discovered elite policies" width="800" height="600" loading="lazy" />
           </div>
-        </div>
-      </details>
-    </div>
-  </template>
-
-  <template class="archive-entry" data-category="projects" data-date="2025-07" data-title="CartPole DQN" data-summary="Deep Q-Network with experience replay and target networks">
-    <div class="project-item">
-      <div class="project-name"><a href="https://github.com/DaGarlic/CartPole" target="_blank" rel="noopener">CartPole DQN ↗</a></div>
-      <p class="project-desc">Deep Q-Network agent using PyTorch to solve CartPole-v1 with experience replay and target networks.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">RL</span><span class="tag">DQN</span></div>
-      <details class="proj-details">
-        <summary>Technical details</summary>
-        <div class="proj-details-body">
-          <p>DQN agent with a separate target network and experience replay buffer for training stability, epsilon-greedy exploration with decay, and soft target updates. Records video of training episodes at a configurable interval.</p>
-          <img src="assets/projects/cartpole-demo.gif" alt="Trained CartPole agent balancing the pole" width="600" height="400" loading="lazy" />
-        </div>
-      </details>
-    </div>
-  </template>
-
-  <template class="archive-entry" data-category="projects" data-date="2025-08" data-title="Agentic-PhishNet" data-summary="Multi-agent LLM framework for phishing email detection">
-    <div class="project-item">
-      <div class="project-name"><a href="https://github.com/DaGarlic/Agentic-PhishNet" target="_blank" rel="noopener">Agentic-PhishNet ↗</a></div>
-      <p class="project-desc">Multi-agent LLM framework for phishing email detection through collaborative analysis.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">Security</span></div>
-      <details class="proj-details">
-        <summary>Technical details</summary>
-        <div class="proj-details-body">
-          <p>An orchestrator agent routes incoming email content to a committee of specialized LLM sub-agents, each analyzing a different signal. Their individual verdicts and confidence scores are aggregated into a single explained verdict, rather than a single opaque classifier score. Django REST backend, React frontend.</p>
         </div>
       </details>
     </div>
